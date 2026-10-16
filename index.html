@@ -5,17 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fff;
+      color: #222;
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
-      font-family: sans-serif;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 340px;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .app-title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 32px;
+    }
+
+    .search-input {
+      width: 100%;
+      border: none;
+      border-bottom: 1.5px solid #ddd;
+      outline: none;
+      font-size: 16px;
+      color: #333;
+      padding: 6px 0;
+      background: transparent;
+      text-align: center;
+    }
+
+    .search-input::placeholder {
+      color: #ccc;
+    }
+
+    .search-btn {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #2a9d8f;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
     }
   </style>
 </head>
 <body>
-  <h1>Weather App</h1>
+  <div class="container">
+    <div class="app-title">Weather App</div>
+    <input class="search-input" type="text" placeholder="Enter a city…">
+    <div>
+      <button class="search-btn">Search</button>
+    </div>
+  </div>
 </body>
 </html>
