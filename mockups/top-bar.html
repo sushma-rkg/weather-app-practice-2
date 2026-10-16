@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup 3 – Top Bar</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f0f4f8;
+      padding: 32px 16px;
+      color: #222;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 32px;
+    }
+
+    .panels {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .panel {
+      background: #e8edf2;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px;
+      flex-shrink: 0;
+    }
+
+    .panel-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #bbb;
+      padding: 14px 16px 12px;
+      text-align: center;
+      background: #e8edf2;
+    }
+
+    /* ---- Top Bar app styles ---- */
+    .tb-page {
+      background: #fff;
+    }
+
+    .tb-bar {
+      background: #2a9d8f;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .tb-bar-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+    }
+
+    .tb-input {
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      padding: 9px 14px;
+      font-size: 14px;
+      color: #333;
+      background: rgba(255,255,255,0.95);
+      outline: none;
+    }
+    .tb-input::placeholder { color: #b0c4c1; }
+
+    .tb-btn {
+      width: 100%;
+      background: rgba(255,255,255,0.18);
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.5);
+      border-radius: 6px;
+      padding: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.06em;
+    }
+
+    /* Content area */
+    .tb-body {
+      padding: 36px 24px;
+      text-align: center;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tb-icon {
+      font-size: 52px;
+      margin-bottom: 8px;
+    }
+    .tb-temp {
+      font-size: 64px;
+      font-weight: 700;
+      color: #1a1a2e;
+      line-height: 1;
+    }
+    .tb-unit {
+      font-size: 28px;
+      font-weight: 400;
+      color: #aaa;
+      vertical-align: super;
+    }
+    .tb-city {
+      font-size: 14px;
+      color: #999;
+      margin: 6px 0 2px;
+      letter-spacing: 0.04em;
+    }
+    .tb-desc {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 16px;
+    }
+    .tb-details {
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .tb-loading {
+      font-size: 14px;
+      color: #aaa;
+      letter-spacing: 0.04em;
+    }
+
+    .tb-error {
+      font-size: 14px;
+      color: #999;
+      line-height: 1.7;
+    }
+    .tb-error-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .tb-placeholder {
+      font-size: 13px;
+      color: #ddd;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mockup 3 — Top Bar</h1>
+  <p class="subtitle">Teal bar fixed at top · white content area below · full-width on phone</p>
+
+  <div class="panels">
+
+    <!-- Panel 1: Before searching -->
+    <div class="panel">
+      <div class="panel-label">Before searching</div>
+      <div class="tb-page">
+        <div class="tb-bar">
+          <div class="tb-bar-title">Weather App</div>
+          <input class="tb-input" type="text" placeholder="Enter a city…" disabled>
+          <button class="tb-btn">Search</button>
+        </div>
+        <div class="tb-body">
+          <div class="tb-placeholder">Your weather will appear here</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 2: Weather result -->
+    <div class="panel">
+      <div class="panel-label">Weather result</div>
+      <div class="tb-page">
+        <div class="tb-bar">
+          <div class="tb-bar-title">Weather App</div>
+          <input class="tb-input" type="text" value="Valoria" disabled>
+          <button class="tb-btn">Search</button>
+        </div>
+        <div class="tb-body">
+          <div class="tb-icon">⛅</div>
+          <div class="tb-temp">24<span class="tb-unit">°C</span></div>
+          <div class="tb-city">Valoria, Arcadia</div>
+          <div class="tb-desc">Partly cloudy</div>
+          <div class="tb-details">Humidity 61% &nbsp;·&nbsp; Wind 18 km/h NW</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 3: City not found -->
+    <div class="panel">
+      <div class="panel-label">City not found</div>
+      <div class="tb-page">
+        <div class="tb-bar">
+          <div class="tb-bar-title">Weather App</div>
+          <input class="tb-input" type="text" value="Xzzqpl" disabled>
+          <button class="tb-btn">Search</button>
+        </div>
+        <div class="tb-body">
+          <div class="tb-error">
+            <div class="tb-error-icon">🔍</div>
+            We couldn't find that city.<br>Check the spelling and try again.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
